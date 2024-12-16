@@ -1,0 +1,732 @@
+*{
+    box-sizing: border-box;
+}
+.text{
+    color: white;
+}
+li, a, ul{
+    color: inherit;
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+
+}
+
+
+/***************************************************************/
+/*****************************NAVBAR****************************/
+/***************************************************************/
+.navbar ul{
+    gap: 30px;
+    margin-top: 10px;
+}
+.navbar ul li a::before{
+    content: "";
+    height: 2px;
+    width: 0;
+    position: absolute;
+    background-color: white;
+    left: 0px;
+    bottom: -6px;
+    transition:  300ms ;
+    transform: translatex(0%);
+
+}
+
+.navbar ul li a:hover::before{
+    width: 100%;
+
+}
+
+
+
+
+.navbar ul a{
+    position: relative;
+    font-size: 17px;
+}
+.title a{
+    font-size: 30px;
+
+}
+
+.navbar{
+    z-index: 9999;
+    position: fixed;
+    height: 70px;
+    background-color: rgba(0, 0, 0,.9);
+    width: 100%;
+    
+}
+
+
+.services .container{
+    width: 100%;
+    margin-inline:auto ;
+}
+
+
+/***************************************************************/
+/*****************************HOME******************************/
+/***************************************************************/
+.home{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+
+}
+.home .content h1{
+    font-size:72px;
+}
+.home .content p{
+    font-size:40px;
+}
+.content{
+    
+    background-color: rgba(0, 0, 0, .5);
+
+}
+
+.content .text {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing4 10s steps(40, end) infinite,
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing4 {
+    0%{width: 0;}
+    15%{width: 16%;} 
+    30%{width: 0;}
+    45%{width: 16%;}
+    60%{width: 0;}
+    75%{width: 16%;}
+    90%{width: 0;}
+    100%{width: 16%;}
+}
+
+  /* The typewriter cursor effect */
+  @keyframes blink-caret { 
+    from, to { border-color: transparent }
+    50% { border-color: rgb(255, 255, 255); }
+  }
+
+
+
+
+/***************************************************************/
+/*****************************ABOUT*****************************/
+/***************************************************************/
+
+  .about{
+    background-color: #f0f0f0;
+    padding: 70px;
+  }
+
+  .sec2 h2{
+    width: fit-content;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  .sec2 h2::before{
+    content: "";
+    width: 70%;
+    height: 4px;
+    bottom: -10px;
+    background-color: #0078FF;
+    position: absolute;
+  }
+  .sec2 p{
+    font-size: 20px;
+    padding-top: 20px;
+    margin: 0;
+  }
+  .how{
+    background-color: white;
+    margin-inline:auto ;
+    padding: 64px;
+    box-shadow: 1px 1px 5px rgb(186, 186, 186);
+    gap: 18px;
+  }
+  
+
+
+  .t-title{
+    font-size: 19px;
+    font-weight:400;
+  }
+  .t-color{
+    color: #4E4E4E;
+    font-size: 18px;
+    font-weight: 300;
+  }
+  .sec1--2 .t-color{
+    color: #4E4E4E;
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .sec1-img{
+   width: fit-content;
+    height: fit-content;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: black;
+    padding: 0;
+  }
+
+  .sec1--2{
+    margin-top: -10px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .sec1--2 p{
+    margin: 0;
+  }
+  .sec2{
+    margin-top: 0;
+  }
+
+
+
+
+/***************************************************************/
+/*****************************SERVICES**************************/
+/***************************************************************/
+.services{
+    background-color: #f0f0f0;
+    padding: 70px;
+}
+.services .card{
+    padding-top: 30px;
+    
+}
+.description h2{
+    font-size: 3rem;
+    font-weight: bold;
+
+}
+.description p .t-color{
+    font-size: 1rem;
+    font-weight: 400;
+
+}
+.description{
+    position: relative;
+    width: fit-content;
+    margin-inline: auto ;
+    padding-bottom: 0;
+}
+.description::before{
+    content: "";
+    width: 10%;
+    height: 6px;
+    bottom: -19px;
+    left: 45%;
+    background-color: #0078FF;
+    position: absolute;
+  }
+.services .description::before{
+    content: "";
+    width: 10%;
+    height: 6px;
+    bottom: -9px;
+    left: 45%;
+    background-color: #0078FF;
+    position: absolute;
+  }
+
+
+.services.card{
+    box-shadow: 1px 1px 10px rgb(236, 236, 236);
+    border-radius: 10px;
+    padding: 30px;
+}
+.services .card:hover i{
+    color: #ffffff;
+    background-color: #0078FF;
+    padding: 32px;
+}
+.card:hover .ico-circle{
+    box-shadow: 0 0 0 10px #a4cfff;
+}
+.ico-circle i{
+    text-align: center;
+    font-size: 2.25rem;
+    padding: 50px;
+    transition: 500ms;
+    border: 10px blue;
+    border-radius: 50%;
+}
+.ico-circle {
+    height: 100px;
+    width: 100px;
+    font-size: 2rem;
+    border-radius: 50%;
+    line-height: 1.55;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    box-shadow: 0 0 0 10px #0078ff;
+    display: block;
+    transition: 500ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.card h3{
+    padding: 15px;
+}
+.card p{
+    max-width: 100%;
+}
+
+
+/***************************************************************/
+/*****************************overlay***************************/
+/***************************************************************/
+.bk-overlay{
+    z-index: -1;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+
+}
+.overlay{
+     color: white;
+    display: flex;
+    background-color: rgb(0, 120, 255,.7);
+    width: 100%;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+    gap: 12%;
+}
+.overlay .ico-circle {
+    height: 70px;
+    width: 70px;
+    font-size: 2rem;
+    border-radius: 50%;
+    line-height: 1.55;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    box-shadow: 0 0 0 10px #cde4ff;
+    display: block;
+    transition: 500ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+.part{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+.part p span{
+    font-size: 32px; ;
+}
+.part p{
+    font-size: 16px;
+    margin: 0;
+}
+
+
+/***************************************************************/
+/*****************************portfolio*************************/
+/***************************************************************/
+.portfolio{
+    padding-top: 70px;
+    background-color: #f0f0f0;
+    padding-bottom:  80px;
+}
+
+.portfolio .cards{
+    padding-top: 40px;
+}
+.portfolio .card{
+border-radius: 0;
+width: 430px;
+padding: 0;
+padding-bottom: 0;
+border: #ffffff;
+
+}
+.portfolio .card .c-img{
+    overflow: hidden;
+    
+}
+.portfolio .card .c-img img{
+    width: 100%;
+    transition: 800ms;
+    
+}
+.c-text p{
+    margin: 0;
+
+}
+.c-text p .t-color{
+    font-size: .8rem;
+    font-weight: 500;
+    margin: 0;
+
+}
+.c-text i{
+    font-size: 25px;
+    font-weight: 500;
+    color: #0078FF;
+
+}
+.portfolio .c-icon {
+    height: 40px;
+    width: 40px;
+    font-size: 30px;
+    border-radius: 50%;
+    line-height: 1.55;
+    
+    text-align: center;
+    box-shadow: 0 0 0 2.5px #0078FF;
+    display: block;
+    transition: 500ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+.portfolio .card:hover img{
+    transform: scale(1.3);
+
+}
+.c-text{
+    display: flex;
+    gap: 35%;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.t2-color{
+    color: #0078ff;
+}
+
+
+/***************************************************************/
+/*****************************about us**************************/
+/***************************************************************/
+.pop .overlay{
+    color: white;
+   display: flex;
+   background-color: rgb(0, 120, 255,.7);
+   width: 100%;
+   height: 600px;
+   justify-content: center;
+   align-items: center;
+    
+}
+.pop .me{
+    text-align: center;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center
+}
+.tt-color{
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 300;
+}
+.pop .me .pop-p{
+    max-width: 85%;
+}
+
+.pop .pop-img{
+    margin-inline:auto ;
+    width: fit-content;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+/***************************************************************/
+/*****************************WORK******************************/
+/***************************************************************/
+
+.work{
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-color: #f0f0f0;
+}
+.work .p-card{
+    border-radius: 0;
+}
+.work .p-card img{
+    border-radius: 0;
+    border: #ffffff;
+    
+}
+.work .p-card h6{
+    top: -16px;
+
+    position: absolute;
+    width: fit-content;
+    background-color: #0078ff;
+    border-radius: 4px;
+    padding: 9px;
+    font-size: 11px;
+    color: #ffffff;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+.work .cards{
+    padding-top: 50px;
+}
+
+.work .my-card .p-card .p-2 {
+    display: flex;
+    
+}
+.work .my-card .p-card .p-1-img {
+    border-radius: 50%;
+    overflow: hidden;
+    width: fit-content;
+    height: fit-content;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+.work .my-card .p-card .p-1 .mnm {
+   display: flex;
+   justify-content: start;
+   align-items: center;
+   gap: 8px;
+
+}
+
+.work .my-card .p-card .p-1  {
+   display: flex;
+   justify-content: start;
+   align-items: center;
+   gap: 35px;
+   justify-content: space-between;
+
+}
+.work .my-card .p-card .p-2  {
+   display: flex;
+   justify-content: start;
+   align-items: center;
+   gap: 3px;
+
+}
+.work .my-card .p-card .p-2  {
+   display: flex;
+   justify-content: start;
+   align-items: center;
+   gap: 3px;
+   color: #5a5a5a;
+   
+
+}
+.work .my-card .p-card   li  {
+    padding: 0;
+
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+.work .my-card .p-card .p-1 p {
+margin: 0;
+padding: 0;
+
+}
+.work .my-card .p-card .p-1-img img{
+    width: 35px;
+
+
+}
+
+.card-body{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    position: relative;
+}
+.card-body h5{
+    transition: 500ms;
+}
+.card-body h5:hover{
+    color: #0078ff;
+}
+ .mnm p{
+    transition: 500ms;
+}
+ .mnm p:hover{
+    color: #0078ff;
+}
+
+.c-cat{
+    display: flex;
+    justify-content: center;
+}
+
+/***************************************************************/
+/*****************************contact******************************/
+/***************************************************************/
+
+.over1{
+    background-color: rgb(0, 120, 255,.7);
+   width: 100%;
+    
+    padding-top: 100px;
+    padding-bottom: 100px;
+    z-index: 5;
+    
+}
+.over11{
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+}
+
+.contact{
+    background-color: #ffffff;
+    width: 85%;
+    margin-inline: auto;
+    padding: 30px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    
+ }
+ .contact h2{
+    width: fit-content;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  .contact h2::before{
+    content: "";
+    width: 50%;
+    height: 4px;
+    bottom: -18px;
+    background-color: #0078FF;
+    position: absolute;
+  }
+
+  .contact-1, .contact-2{
+    margin-top: 0;
+  }
+
+  .contact-2 .con-2 p{
+    padding: 5px;
+    
+    margin: 0;
+    
+  }
+ 
+  .contact-2 .con-2 i{
+    color: #0078FF;
+    padding-right: 8px;
+
+    
+  }
+  .contact-2 .con-3 i{
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    
+  }
+  .contact-2 .con-3 {
+    display: flex;
+    gap: 10px;
+    padding-top: 10px;
+   
+    
+  }
+  .con-3 .c-icon {
+    height: 40px;
+    width: 40px;
+    font-size: 30px;
+    border-radius: 50%;
+    line-height: 1.55;
+    
+    text-align: center;
+    box-shadow: 0 0 0 2.5px #0078FF;
+    display: block;
+    transition: 500ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+.con-3 :hover i{
+    color: #ffffff;
+    background-color: #0078FF;
+    border-radius: 50%;
+    padding: 10px;
+    margin: 0;
+}
+.con-3 .c-icon:hover {
+    box-shadow: 0 0 0 2px #a4cfff;
+}
+  
+  .contact-1, .contact-2{
+    margin-top: 0;
+  }
+
+  .contact-2 .con-body p{
+    padding: 15px;
+    padding-bottom:2px ;
+    margin: 0;
+    padding-left: 0;
+    max-width:80% ;
+  }
+
+  .contact-2 .t-color{
+    font-size: 20px;
+  }
+
+ .contact-1 form {
+display: flex; 
+flex-direction: column;
+gap: 25px;
+
+}
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color:#0078FF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5rem;
+    transition: 300ms;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    
+    
+    
+}
+
+input[type="submit"]:hover {
+    background-color:#459cff;
+}
+
+
+
+
+
